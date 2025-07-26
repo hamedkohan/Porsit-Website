@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORSIT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <div class="container mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="col-span-1 md:col-span-2">
+      <h1 class="text-3xl font-bold mb-4">پُرسیت</h1>
+      <p class="text-sm text-gray-600">پلتفرم حمل و نقل و دستیار هوشمند</p>
+    </div>
+    <aside class="sticky top-0 w-60">
+      <nav>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-blue-500">پیگیری مرسوله</a></li>
+          <li><a href="#" class="text-blue-500">استعلام هزینه</a></li>
+          <li><a href="#" class="text-blue-500">تحویل سریع</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+<script type="module">
+  import { initChatbot } from "../chatbot-widget/widget.js";
+  initChatbot();
+</script>
+</body>
+</html>
