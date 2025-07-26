@@ -1,0 +1,17 @@
+openapi: 3.0.0
+info:
+  title: PORSIT API
+  version: 1.0.0
+paths:
+  /track/{carrier}:
+    get:
+      summary: Track shipment
+      parameters:
+        - name: carrier
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Tracking info

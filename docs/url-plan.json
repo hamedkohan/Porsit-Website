@@ -1,0 +1,6 @@
+{
+  "track": "/track/[carrier]",
+  "shippingCost": "/shipping-cost/[origin]-[destination]",
+  "deliveryFast": "/delivery/fast/[city]",
+  "customs": "/customs/[topic]"
+}
