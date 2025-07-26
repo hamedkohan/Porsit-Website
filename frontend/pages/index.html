@@ -4,20 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PORSIT</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Vazirmatn', 'Inter', 'sans-serif']
+          },
+          colors: {
+            basebg: '#F9FAFB',
+            cardbg: '#FFFFFF',
+            primarytxt: '#111827',
+            secondarytxt: '#6B7280',
+            blue: '#3B82F6',
+            green: '#10B981',
+            red: '#EF4444',
+            purple: '#8B5CF6',
+            orange: '#F97316'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <div class="container mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div class="col-span-1 md:col-span-2">
-      <h1 class="text-3xl font-bold mb-4">پُرسیت</h1>
-      <p class="text-sm text-gray-600">پلتفرم حمل و نقل و دستیار هوشمند</p>
+<body class="font-sans text-sm bg-basebg text-primarytxt leading-relaxed">
+  <div class="container mx-auto py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="col-span-1 md:col-span-2 space-y-4">
+      <h1 class="text-3xl font-bold">پُرسیت</h1>
+      <p class="text-secondarytxt text-sm">پلتفرم حمل و نقل و دستیار هوشمند</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="track/tipax.html" class="bg-cardbg rounded-xl shadow-sm p-4 flex items-center gap-2 hover:shadow-md">
+          <span class="text-blue-600">پیگیری مرسوله</span>
+        </a>
+        <a href="#" class="bg-cardbg rounded-xl shadow-sm p-4 flex items-center gap-2 hover:shadow-md">
+          <span class="text-blue-600">استعلام هزینه</span>
+        </a>
+        <a href="#" class="bg-cardbg rounded-xl shadow-sm p-4 flex items-center gap-2 hover:shadow-md">
+          <span class="text-blue-600">تحویل سریع</span>
+        </a>
+      </div>
     </div>
-    <aside class="sticky top-0 w-60">
+    <aside class="sticky top-4 w-60">
       <nav>
-        <ul class="space-y-2">
-          <li><a href="#" class="text-blue-500">پیگیری مرسوله</a></li>
-          <li><a href="#" class="text-blue-500">استعلام هزینه</a></li>
-          <li><a href="#" class="text-blue-500">تحویل سریع</a></li>
+        <ul class="space-y-2 text-sm">
+          <li><a href="track/tipax.html" class="block py-2 px-3 rounded-lg hover:bg-blue-50">پیگیری مرسوله</a></li>
+          <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-50">استعلام هزینه</a></li>
+          <li><a href="#" class="block py-2 px-3 rounded-lg hover:bg-blue-50">تحویل سریع</a></li>
         </ul>
       </nav>
     </aside>

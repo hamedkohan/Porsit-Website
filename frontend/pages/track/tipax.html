@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پیگیری مرسوله تیپاکس</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Vazirmatn', 'Inter', 'sans-serif']
+          },
+          colors: {
+            basebg: '#F9FAFB',
+            cardbg: '#FFFFFF',
+            primarytxt: '#111827',
+            secondarytxt: '#6B7280',
+            blue: '#3B82F6',
+            green: '#10B981',
+            red: '#EF4444',
+            purple: '#8B5CF6',
+            orange: '#F97316'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-sm bg-basebg text-primarytxt leading-relaxed">
+  <header class="px-6 py-4 bg-cardbg shadow-sm">
+    <nav class="container mx-auto flex justify-between">
+      <div class="text-lg font-bold">پُرسیت</div>
+      <a href="/" class="text-blue-600">خانه</a>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="md:col-span-2 space-y-4">
+      <h1 class="text-2xl font-bold">پیگیری مرسوله تیپاکس</h1>
+      <p class="text-secondarytxt text-sm">برای مشاهده وضعیت بسته خود، کد رهگیری را وارد کنید.</p>
+      <div class="bg-cardbg rounded-xl shadow-sm p-6 flex flex-col gap-4">
+        <input id="trackCode" type="text" placeholder="کد رهگیری" class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        <button id="trackBtn" class="bg-blue-600 text-white rounded-lg px-4 py-2 hover:bg-blue-700">پیگیری</button>
+        <pre id="result" class="text-sm text-green-600"></pre>
+      </div>
+    </section>
+  </main>
+
+  <script type="module">
+    import { initChatbot } from "../../chatbot-widget/widget.js";
+    initChatbot();
+    document.getElementById('trackBtn').onclick = () => {
+      const code = document.getElementById('trackCode').value.trim();
+      const result = document.getElementById('result');
+      if (code) {
+        result.textContent = `وضعیت مرسوله ${code} در حال بررسی است...`;
+      }
+    }
+  </script>
+</body>
+</html>
