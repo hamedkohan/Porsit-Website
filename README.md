@@ -25,7 +25,7 @@ Once running, visit `http://localhost:3000/api/health` to check the server statu
 
 ## Frontend
 
-The frontend lives under `frontend/pages`. It loads a simple chatbot widget.
+The frontend lives under `frontend/pages` and uses TailwindCSS. A new example page `track/tipax.html` demonstrates the minimal Persian UI with the Vazirmatn font and chatbot widget.
 
 ### Run a Development Server
 
